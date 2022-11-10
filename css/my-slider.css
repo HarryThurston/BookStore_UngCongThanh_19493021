@@ -7,7 +7,9 @@
 .fas1:hover {
     opacity: 0.9;
 }
-
+h4 {
+    color: rgb(235, 73, 14);
+}
 .ism-slider>ol,
 .ism-slider>ol>li,
 .ism-slider>ol>li>img {

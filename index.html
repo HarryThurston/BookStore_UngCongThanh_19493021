@@ -20,7 +20,7 @@
             var regt = /[A-Za-z]{4,}/;
             var ten = document.getElementById("txtname").value;
             if (regt.test(ten) == false) {
-                document.getElementById("er1").innerHTML = "Ít nhất 4 ký tự";
+                document.getElementById("er1").innerHTML = "User name ít nhất 4 ký tự";
                 return false;
             } else {
                 document.getElementById("er1").innerHTML = "";
@@ -71,7 +71,7 @@
             var regp = /[0-9]{10}/;
             var pon = document.getElementById("txtphone").value;
             if (regp.test(pon) == false) {
-                document.getElementById("er5").innerHTML = "nhập 10 số";
+                document.getElementById("er5").innerHTML = "Nhập 10 số";
                 return false
             } else {
                 document.getElementById("er5").innerHTML = "";
@@ -83,7 +83,7 @@
             var regc = /[0-9]{9}/;
             var cm = document.getElementById("txtcmnd").value;
             if (regc.test(cm) == false) {
-                document.getElementById("er6").innerHTML = "nhập 9 số";
+                document.getElementById("er6").innerHTML = "Nhập đủ 9 số";
                 return false
             } else {
                 document.getElementById("er6").innerHTML = "";
@@ -167,7 +167,7 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link"><i class="fa fa-home"></i>Home <span
+                            <a class="nav-link" href="index.html"><i class="fa fa-home"></i>Home <span
                                     class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
@@ -759,8 +759,8 @@
                 <div class="col-12 col-xs-3 col-sm-3 col-md-3 col-lg-3 ">
                     <div class="infor ">
                         <h5>Dịch vụ</h5>
-                        <a href="# "><i class="fas fa-shipping-fast "></i> Vận chuyển miễn phí</a>
-                        <a href="# "><i class="fas fa-tools "></i> Đổi trả</a>
+                        <a href="./product/Delivery.html "><i class="fas fa-shipping-fast "></i> Vận chuyển miễn phí</a>
+                        <a href="./product/returnpolicy.html "><i class="fas fa-tools "></i> Đổi trả</a>
                         <a href="# "><i class="fas fa-handshake "></i> Chăm sóc khách hàng</a>
                     </div>
                 </div>
@@ -805,21 +805,21 @@
                             <div class="form-group">
                                 <label class="label-control col-xs-12 col-sm-12 col-md-12 col-lg-12">User Name</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    <input type="text" placeholder="zero000" class="form-control" id="txtname"
+                                    <input type="text" placeholder="Example: Harry" class="form-control" id="txtname"
                                         onblur="testTen()"> <span id="er1">*</span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="label-control col-xs-3 col-sm-3 col-md-3 col-lg-3">PassWord</label>
+                                <label class="label-control col-xs-3 col-sm-3 col-md-3 col-lg-3">Password</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    <input type="password" id="txtpass" onblur="testpass()" class="form-control"><span
+                                    <input type="Password" id="txtpass" onblur="testpass()" class="form-control"><span
                                         id="er2">*</span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="label-control col-xs-5 col-sm-5 col-md-5 col-lg-5">Enter PassWord</label>
+                                <label class="label-control col-xs-5 col-sm-5 col-md-5 col-lg-5">Enter Password</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    <input type="password" id="txtpass2" onblur="testepass()" class="form-control"><span
+                                    <input type="Password" id="txtpass2" onblur="testepass()" class="form-control"><span
                                         id="er3">*</span>
                                 </div>
                             </div>
@@ -879,13 +879,13 @@
                             <div class="form-group">
                                 <label class="label-control col-xs-12 col-sm-12 col-md-12 col-lg-12">User Name</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    <input type="text" id="txtname" placeholder="nhap Username" class="form-control">
+                                    <input type="text" id="txtname" placeholder="Enter Username" class="form-control">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="label-control col-xs-3 col-sm-3 col-md-3 col-lg-3">PassWord</label>
+                                <label class="label-control col-xs-3 col-sm-3 col-md-3 col-lg-3">Password</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    <input type="password" id="txtpass" class="form-control">
+                                    <input type="Password" id="txtpass" class="form-control" placeholder="Password">
                                 </div>
                             </div>
                             <div class="form-group">
