@@ -268,28 +268,35 @@
     .clearfix-main {
         min-height: 4350px;
     }
+
     .khuyen-mai {
         min-height: 850px;
     }
+
     .tin-tuc {
         min-height: 1200px;
     }
+
     .footer>.container>.row>.col-12 {
         border-bottom: 1px solid rgb(184, 182, 182);
     }
+
     .infor>a {
         text-align: left;
     }
+
     .infor-bottom>p,
     .infor-bottom>a {
         margin-left: 0px;
     }
+
     .card {
         min-height: 300px;
     }
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto');
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -425,6 +432,7 @@ i {
     #navbarSupportedContent ul li a {
         padding: 12px 30px;
     }
+
     .hori-selector {
         margin-top: 0px;
         margin-left: 10px;
@@ -432,21 +440,26 @@ i {
         border-top-left-radius: 25px;
         border-bottom-left-radius: 25px;
     }
+
     .hori-selector .left,
     .hori-selector .right {
         right: 10px;
     }
+
     .hori-selector .left {
         top: -25px;
         left: auto;
     }
+
     .hori-selector .right {
         bottom: -25px;
     }
+
     .hori-selector .left:before {
         left: -25px;
         top: -25px;
     }
+
     .hori-selector .right:before {
         bottom: -25px;
         left: -25px;
@@ -579,6 +592,7 @@ span.psw {
     from {
         -webkit-transform: scale(0)
     }
+
     to {
         -webkit-transform: scale(1)
     }
@@ -588,6 +602,7 @@ span.psw {
     from {
         transform: scale(0)
     }
+
     to {
         transform: scale(1)
     }
@@ -601,6 +616,7 @@ span.psw {
         display: block;
         float: none;
     }
+
     .cancelbtn {
         width: 100%;
     }

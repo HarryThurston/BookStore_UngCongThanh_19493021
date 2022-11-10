@@ -330,19 +330,24 @@
     .clearfix-main {
         min-height: 4350px;
     }
+
     .khuyen-mai {
         min-height: 650px;
     }
+
     .footer>.container>.row>.col-12 {
         border-bottom: 1px solid rgb(184, 182, 182);
     }
+
     .infor>a {
         text-align: left;
     }
+
     .infor-bottom>p,
     .infor-bottom>a {
         margin-left: 0px;
     }
+
     .card {
         min-height: 300px;
     }
