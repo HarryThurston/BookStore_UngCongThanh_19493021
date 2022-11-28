@@ -70,7 +70,6 @@ function testdkmk() {
 function logintk() {
     if (!testmk || !testtk)
         return false;
-
     return true;
 }
 
@@ -90,7 +89,7 @@ function re_testmk() {
 }
 
 function testname() {
-    reg = /^[a-zA-Z]+?\'?\ ?[[a-zA-Z]+?\'?\ ?]?[[a-zA-Z]+?\'?\ ?]?[[a-zA-Z]+?\'?\ ?]?[[a-zA-Z]+?\'?\ ?]?$/g;
+    reg = /([A-Z]{1}[a-z]+)((\s{1}[A-Z]{1}[a-z]+){1,})$/;
     if (!reg.test(document.getElementById("txtname").value)) {
         document.getElementById("tbname").innerHTML = "(Không hợp lệ)";
         return false;
@@ -117,5 +116,4 @@ function add_giohang() {
         document.getElementById("slsanpham").innerHTML = add_giohang_value;
         return;
     }
-
 }

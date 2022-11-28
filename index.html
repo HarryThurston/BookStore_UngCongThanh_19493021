@@ -36,30 +36,29 @@
                 document.getElementById("er2").innerHTML = "";
                 return true;
             } else {
-                document.getElementById("er2").innerHTML = "Mật khẩu là các ký tự số và chữa, có ít nhất 1 ký tự đặc biệt và ít nhất 8 ký tự!!!";
+                document.getElementById("er2").innerHTML = "Mật khẩu là các ký tự số và chữ, có ít nhất 1 ký tự đặc biệt và ít nhất 8 ký tự";
                 return false;
             }
-
         }
 
-        //viet them funtion kiem tra nhap lai mat khau 
-        function testepass() {
+        //funtion kiem tra nhap lai mat khau 
+        function testrepass() {
             var mk = document.getElementById("txtpass").value;
             var mk2 = document.getElementById("txtpass2").value;
             if (mk == mk2) {
                 document.getElementById("er3").innerHTML = "";
                 return true
             } else {
-                document.getElementById("er3").innerHTML = "Mật khẩu không đúng với mật khẩu trên!!!";
+                document.getElementById("er3").innerHTML = "Mật khẩu không khớp với mật khẩu đã nhập!!!";
                 return false
             }
         }
         //kiem tra email, gmail
         function testmail() {
-            var rege = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+            var rege = /[A-Za-z0-9]{5,}@gmail.com$/;
             var mal = document.getElementById("txtemail").value;
             if (rege.test(mal) == false) {
-                document.getElementById("er4").innerHTML = "nhập sai email";
+                document.getElementById("er4").innerHTML = "Email không hợp lệ";
                 return false
             } else {
                 document.getElementById("er4").innerHTML = "";
@@ -68,10 +67,10 @@
         }
 
         function testphone() {
-            var regp = /[0-9]{10}/;
+            var regp = /[0-9]{10,10}/;
             var pon = document.getElementById("txtphone").value;
             if (regp.test(pon) == false) {
-                document.getElementById("er5").innerHTML = "Nhập 10 số";
+                document.getElementById("er5").innerHTML = "SDT gồm có 10 số";
                 return false
             } else {
                 document.getElementById("er5").innerHTML = "";
@@ -79,11 +78,11 @@
             }
         }
 
-        function testcmnd() {
-            var regc = /[0-9]{9}/;
-            var cm = document.getElementById("txtcmnd").value;
+        function testcccd() {
+            var regc = /[0-9]{12,12}/;
+            var cm = document.getElementById("txtcccd").value;
             if (regc.test(cm) == false) {
-                document.getElementById("er6").innerHTML = "Nhập đủ 9 số";
+                document.getElementById("er6").innerHTML = "Nhập đủ 12 số";
                 return false
             } else {
                 document.getElementById("er6").innerHTML = "";
@@ -92,12 +91,23 @@
         }
 
         function test() {
-            if (testepass() == true && testepass() == true && testTen() == true && testepass() == true && testphone() == true && testcmnd() == true)
+            if (testpass() == true && testrepass() == true && testTen() == true && testmail() == true && testphone() == true && testcccd() == true)
                 document.getElementById("btntest").disabled = false;
+            else {
+                window.alert("Bạn chưa nhập đủ thông tin");}
+        }
+        function test1() {
+            if (testrepass() == true && (testTen() == true||testmail() == true))
+                document.getElementById("btntest1").disabled = false;
+            else {
+                window.alert("Login Fail");}
         }
 
         function show() {
             window.alert("Sign up successfull")
+        }
+        function show1() {
+            window.alert("Login successfull")
         }
     </script>
 
@@ -812,14 +822,14 @@
                             <div class="form-group">
                                 <label class="label-control col-xs-3 col-sm-3 col-md-3 col-lg-3">Password</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    <input type="Password" id="txtpass" onblur="testpass()" class="form-control"><span
+                                    <input type="Password" id="txtpass" onblur="testpass()" class="form-control" placeholder="Yugioh14@"><span
                                         id="er2">*</span>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label class="label-control col-xs-5 col-sm-5 col-md-5 col-lg-5">Enter Password</label>
+                                <label class="label-control col-xs-5 col-sm-5 col-md-5 col-lg-5">re-password</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    <input type="Password" id="txtpass2" onblur="testepass()" class="form-control"><span
+                                    <input type="Password" id="txtpass2" onblur="testepass()" class="form-control" placeholder="*********"><span
                                         id="er3">*</span>
                                 </div>
                             </div>
@@ -834,13 +844,13 @@
                                 <label class="label-control col-xs-3 col-sm-3 col-md-3 col-lg-3">Phone</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                                     <input type="tel" id="txtphone" onblur="testphone()" class="form-control"> <span
-                                        id="er5">*</span>
+                                        id="er5" placeholder="0971191412">*</span>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="label-control col-xs-3 col-sm-3 col-md-3 col-lg-3">CMND</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
-                                    <input type="text" id="txtcmnd" onblur="testcmnd(),test()" class="form-control">
+                                    <input type="text" id="txtcccd" onblur="testcccd(),test()" class="form-control" placeholder="12 số CCCD">
                                     <span id="er6">*</span>
                                 </div>
                             </div>
@@ -877,7 +887,7 @@
                     <div class="modal-body">
                         <form class="form-horizontal">
                             <div class="form-group">
-                                <label class="label-control col-xs-12 col-sm-12 col-md-12 col-lg-12">User Name</label>
+                                <label class="label-control col-xs-12 col-sm-12 col-md-12 col-lg-12">User name or Email</label>
                                 <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                                     <input type="text" id="txtname" placeholder="Enter Username" class="form-control">
                                 </div>
@@ -890,7 +900,7 @@
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <button class="btn btn-info" id="btntest">Login</button>
+                                    <button class="btn btn-info" id="btntest1" onclick="show1()">Login</button>
                                 </div>
                             </div>
                         </form>
