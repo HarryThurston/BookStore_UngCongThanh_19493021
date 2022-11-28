@@ -12,7 +12,7 @@ $(document).ready(function() {
 
 //---đăng nhập
 function dangnhap_() {
-    alert("vui lòng đăng nhập ở trang chủ");
+    alert("Vui lòng đăng nhập ở trang chủ");
     return false;
 }
 
@@ -39,13 +39,13 @@ function testsdt() {
         document.getElementById("tbsdt").innerHTML = "";
         return true;
     }
-    document.getElementById("tbsdt").innerHTML = "( sdt không hợp lệ)";
+    document.getElementById("tbsdt").innerHTML = "( SDT không hợp lệ)";
     return false;
 }
 
 function testmk() {
     if (document.getElementById("txtmk").value == "") {
-        document.getElementById("tbmk").innerHTML = "(Chưa nhập)";
+        document.getElementById("tbmk").innerHTML = "(Nhập mật khẩu)";
         return false;
     }
     document.getElementById("tbmk").innerHTML = "";
@@ -55,12 +55,12 @@ function testmk() {
 
 function testdkmk() {
     if (document.getElementById("txtmk").value == "") {
-        document.getElementById("tbmk").innerHTML = "(Chưa nhập)";
+        document.getElementById("tbmk").innerHTML = "(Nhập mật khẩu)";
         return false;
     }
     var mk = document.getElementById("txtmk").value.length;
     if (mk < 4) {
-        document.getElementById("tbmk").innerHTML = "(Ít nhất 4 ký tự)";
+        document.getElementById("tbmk").innerHTML = "(Mật khẩu gồm nhất 4 ký tự)";
         return false;
     }
     document.getElementById("tbmk").innerHTML = "";
@@ -74,7 +74,7 @@ function logintk() {
     return true;
 }
 
-// đăng ký------------
+// đăng ký
 
 // kt tai khoan -> đăng nhập
 
